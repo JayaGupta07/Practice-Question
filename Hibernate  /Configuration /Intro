@@ -1,4 +1,0 @@
-Hibernate Configuration Properties
-It represents the type of database used in hibernate to generate SQL statements for a particular relational database.
-hibernate.show_sql. It is used to display the executed SQL statements to console. hibernate.format_sql. 
-It is used to print the SQL in the log and console
