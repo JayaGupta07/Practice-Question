@@ -1,0 +1,3 @@
+The Employee class has an Address field which is marked with the @Embedded annotation.
+This tells Hibernate that the Address object is an embeddable object and its properties should be mapped to columns 
+in the same table as the Employee class.
