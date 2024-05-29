@@ -1,0 +1,26 @@
+In Hibernate, you can save images and other types of values as attributes of your entity classes using appropriate data types and mappings. 
+To save images and other types of values using Hibernate, you first need to create an entity class that represents the data you want to save.
+In this entity class, you’ll define the fields that correspond to the data, and annotate them with Hibernate annotations that specify how they should be mapped to the database. To save images, you can use the @Lob annotation with a data type of byte[] or Blob to indicate that the attribute should be stored as a large object. 
+
+Annotation Used to Save Images:-
+
+The @Lob Annotation in Hibernate is used to indicate that a particular field should be mapped to a Large Object (LOB) data type in the database. Large Objects are used to store binary or character data that is too large to fit in a regular column, such as images, video, audio, or large text documents.
+In Hibernate, the @Lob annotation can be applied to any of the following types:
+java.sql.Blob: for binary data
+java.sql.Clob: for character data
+byte[]: for binary data
+String: for character data
+When you use the @Lob annotation with a binary data type such as java.sql.Blob or byte[], Hibernate will automatically create a BLOB column in the database to store the data. When you use the @Lob annotation with a character data type such as java.sql.Clob or String, Hibernate will create a CLOB column.
+
+Steps to Save Images:-
+1.Define the entity class: Define an entity class with fields for the data you want to save. Annotate the fields with the appropriate Hibernate annotations, such as @Lob for large object data types.
+2.Annotate the entity class: Use Hibernate annotations to specify how each field should be mapped to the database. For example, use the @Column annotation to specify the name and type of each column in the database table.
+3.Use @Lob for Large Objects: Use the @Lobannotation to indicate that a particular field should be mapped to a Large Object (LOB) data type in the database. This is typically used for binary data such as images or other types of files.
+4.Create a Hibernate configuration: Create a Hibernate configuration file that specifies the database connection details and other settings for your application.
+5.Create a session factory: Use the Hibernate configuration file to create a session factory object that will manage connections to the database.
+6.Open a session: Use the session factory to open a new session object that you can use to interact with the database.
+7.Begin a transaction: Start a new transaction using the beginTransaction() method on the session object.
+8.Create an entity object: Create a new instance of the entity class you defined in step 1, and set the values of its fields to the data you want to save.
+9.Save the entity object: Use the save() or persist() method on the session object to save the entity object to the database.
+10.Commit the transaction: Call the commit() method on the transaction object to commit the changes to the database.
+11.Close the session: Close the session using the close() method on the session object.
